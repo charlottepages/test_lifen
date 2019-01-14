@@ -3,8 +3,8 @@ class Communication < ApplicationRecord
 
   def as_json(options = nil)
     {
-      first_name: practitioner.first_name,
-      last_name: practitioner.last_name,
+      first_name: self.practitioner.first_name,
+      last_name: self.practitioner.last_name,
       sent_at: sent_at
     }
   end
